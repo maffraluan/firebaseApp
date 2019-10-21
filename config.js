@@ -1,23 +1,13 @@
-import Firebasekey from './config';
-import firebase from 'firebase';
+import * as firebase from 'firebase';
 
-class Fire {
-    constructor() {
-        firebase.initializeApp(Firebasekey)
-    }
-
-    get firestore() {
-        return firebase.firestore();
-    }
-
-    get uid() {
-        return (firebase.auth().currentUser || {}).uid
-    }
-
-    get timestamp() {
-        return Date.now();
-    }
-}
-
-Fire.shared = new Fire();
-export default Fire;
+var firebaseConfig = {
+    apiKey: "AIzaSyA2WxGjpbyNppu1YW_7ba4Ectg8XdLLQQE",
+    authDomain: "socialapp-4fed7.firebaseapp.com",
+    databaseURL: "https://socialapp-4fed7.firebaseio.com",
+    projectId: "socialapp-4fed7",
+    storageBucket: "socialapp-4fed7.appspot.com",
+    messagingSenderId: "799328105935",
+    appId: "1:799328105935:web:ec3662de790c69fce94eba"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);

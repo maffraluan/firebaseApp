@@ -36,6 +36,8 @@ target 'firebaseApp' do
   pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
   pod 'RNGestureHandler', :podspec => '../node_modules/react-native-gesture-handler/RNGestureHandler.podspec' 
   
+  pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
   target 'firebaseAppTests' do
     inherit! :search_paths
     # Pods for testing
